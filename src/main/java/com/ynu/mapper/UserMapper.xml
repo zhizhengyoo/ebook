@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ynu.mapper.UserMapper">
+
+	<resultMap type="com.ynu.dto.User" id="userMap">
+		<id property="userId" column="USER_ID" />
+		<result property="userName" column="USER_NAME" />
+		<result property="passWord" column="PASS_WORD" />
+		<result property="email" column="EMAIL" />
+		<result property="phone" column="PHONE" />
+		<result property="address" column="ADDRESS" />
+		<result property="userRole" column="USER_ROLE" />
+		<result property="account" column="ACCOUNT" />
+		<result property="idLevel" column="idLevel" />
+		<result property="account" column="account" />
+	</resultMap>
+
+
+	<select id="findUser" resultMap="userMap">
+		select * from sys_user where
+		USER_NAME = #{userName}
+	</select>
+	
+	<select id="selectUserById" resultMap="userMap">
+		select * from user where
+		idUser = #{idUser}
+	</select>
+	<insert id="insertUser" parameterType="com.ynu.dto.User">
+		INSERT INTO
+		user(user_name,user_pw,user_phone)
+		values(#{user_name},#{user_pw},#{user_phone})
+	</insert>
+	<update id="updateAccount">
+		UPDATE `moviesys_db`.`user` SET `account`=#{account} where idUser=#{idUser};
+	</update>
+</mapper>

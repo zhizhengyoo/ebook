@@ -8,5 +8,4 @@ public interface UserMapper {
     public User selectUserById(Integer userId);
     public void insertUser(User user);
     public void updateAccount(Map<String, Integer> map);
-
 }
