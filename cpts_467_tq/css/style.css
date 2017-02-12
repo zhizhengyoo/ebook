@@ -84,7 +84,7 @@ header .form-search{
 }
 header .form-search input{width: 70%;height: 35px;}
 header .form-search button {
-	background: #8ab5b1;
+	background: #e67201;
 	color: #fff;
 	/*padding: 12px 20px;
 	font-size: 20px;*/
@@ -97,7 +97,7 @@ header .form-search button:hover {color: #eee;}
 	header #cart {float: none;}
 }
 
-#menu {background-color: #8ab5b1;border-radius: 0;height: 50px}
+#menu {background-color: #e67201;border-radius: 0;height: 50px}
 #menu #heading {float: left;padding-left: 15px;font-size: 20px;font-weight: 700;line-height: 40px;color: #fff;margin-top: 10px;text-transform: uppercase;}
 #menu .dropdown-menu {background-color: #111;}
 #menu .dropdown-menu li > a:hover {color: #ffffff;background-color: #3f3f3f;}
@@ -133,7 +133,7 @@ header .form-search button:hover {color: #eee;}
 .carousel-inner{}
 .banner div{margin-bottom: 10px;}
 
-.heading {border-bottom: 1px solid #ddd;margin-bottom: 30px;}
+.heading {border-bottom: 1px solid #f15a13;margin-bottom: 30px;}
 .heading h1, .heading h2{font-size: 30px;padding-bottom: 10px;}
 
 /* ---breadcrumb--- */
@@ -211,7 +211,7 @@ header .form-search button:hover {color: #eee;}
 /* ---------------------------------------------------------------------------- */
 /* -----------------------------------Footer---------------------------------- */
 /* ---------------------------------------------------------------------------- */
-footer {background: #2A2A2A;}
+footer {background: #eeeeee;}
 
 footer .wrap-footer {padding: 50px 0;}
 
@@ -230,7 +230,7 @@ footer .footer-4 ul{padding-left: 0px;}
 footer .footer-4 ul li{margin-top: 10px; list-style: none;}
 footer .footer-4 span{margin-right:10px;}
 
-footer .copyright {background: #393939;padding: 20px 0;}
+footer .copyright {background:#e67201;padding: 20px 0;}
 footer .copyright a {color: #fff;}
 footer .copyright a:hover {text-decoration: underline;}
 footer .copyright ul li {display: inline-block;margin-left: 10px;}
@@ -261,7 +261,7 @@ footer .copyright ul li {display: inline-block;margin-left: 10px;}
 /* ---------------------------------------------------------------------------- */
 .btn {}
 .btn.btn-1{
-	background-color: #8ab5b1;
+	background-color: #e67201;
 	color: #fff;
 	/*font-size: 25px;*/
 	padding: 10px 15px;
