@@ -56,7 +56,7 @@ public class UserController {
 	}
 
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
-	public String registerUser(@RequestParam("user_phone") String phone, @RequestParam("user_pw") String password,
+	public String registerUser(@RequestParam("phone") String phone, @RequestParam("userName") String password,
 			ModelMap model) {
 		System.out.println(phone);
 		User user = new User();

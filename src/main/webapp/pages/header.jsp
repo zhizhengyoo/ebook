@@ -30,6 +30,7 @@
     
     <!-- Core JavaScript Files -->       
     <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/kendo.ui.core.min.js"></script>
     
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -79,6 +80,7 @@
                         <li><a href="#signin" data-toggle="tab">注册</a></li>
                     </ul>
                     <div id="myTabContent" class="tab-content">
+                    
                         <div class="tab-pane fade in active" id="loginDiv">
                             <form class="form-horizontal">
                                 <div class="form-group">
@@ -108,30 +110,51 @@
                             </form>
                         </div>
                         <div class="tab-pane fade" id="signin">
-                            <form class="form-horizontal">
+                            <form method="post" action="/ebook/register" class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-                                    <div class="col-sm-10">
-                                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                                    <div class="dropdown col-sm-4">
+                                       <select id="signinMode" class="form-control">
+                                            <option value="phone">手机号</option>
+                                            <option value="email">邮箱</option>
+                                        </select>
+                                    </div>
+                                    <div id="signUnique" class="col-sm-8">
+                                        <input class="form-control" id="phone" placeholder="手机号">
+                                    </div>
+                                </div>
+                                 <script>
+                                 $("#signinMode").change(function(){
+                                    debugger; 
+                                    var signMode = $("#signinMode option:selected").val();
+                                    if(signMode == "phone"){
+                                        $("#signUnique").remove();
+                                        $("#signinMode").parent().parent().append('<div id="signUnique" class="col-sm-8"><input class="form-control" id="phone" placeholder="手机号"></div>')
+                                    }else{
+                                        $("#signUnique").remove();
+                                        $("#signinMode").parent().parent().append('<div id="signUnique" class="col-sm-8"><input type="email" class="form-control" id="email" placeholder="邮箱"></div>')
+                                    }
+                                 });
+                                           
+                                            
+                                        </script>
+                                <div class="form-group">
+                                    <label for="userName" class="col-sm-4 control-label">用户名</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="userName" placeholder="用户名">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-                                    <div class="col-sm-10">
-                                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                                    <label for="inputPassword3" class="col-sm-4 control-label">密码</label>
+                                    <div class="col-sm-8">
+                                        <input type="password" class="form-control" id="inputPassword4" placeholder="密码">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="col-sm-8" style="text-align: center">
-                                        <button type="submit" class="btn btn-default">Sign out</button>
+                                    <div class="col-sm-12" style="text-align: center">
+                                        <button type="submit" class="btn btn-default">注册</button>
+                                        <button type="reset" class="btn btn-default">重置</button>
                                     </div>
-                                    <div class="col-sm-4">
-                                        <div class="checkbox">
-                                            <label>
-                                                <input type="checkbox"> Remember me
-                                            </label>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                             </form>
                         </div>
@@ -163,6 +186,7 @@
             </div>
         </div>
     </header>
+    
     <!--Navigation-->
     <nav id="menu" class="navbar">
         <div class="container">

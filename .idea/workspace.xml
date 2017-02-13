@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe632ac4-39b4-407e-a566-4f16230cbe07" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ynu/controller/UserController.class" afterPath="$PROJECT_DIR$/target/classes/com/ynu/controller/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cpts_467_tq/css/style.css" afterPath="$PROJECT_DIR$/cpts_467_tq/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cpts_467_tq/index.html" afterPath="$PROJECT_DIR$/cpts_467_tq/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ynu/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/ynu/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/pages/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/css/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/com.hand/ebook/pom.properties" afterPath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/com.hand/ebook/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SQL/ebook.sql" afterPath="$PROJECT_DIR$/SQL/ebook.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/header.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/pages/header.jsp" />
     </list>
     <ignored path="ebook.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -267,12 +260,12 @@
       <option name="presentableId" value="Default" />
       <updated>1486710436791</updated>
       <workItem from="1486710438286" duration="161000" />
-      <workItem from="1486948114267" duration="14717000" />
+      <workItem from="1486948114267" duration="15313000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14878000" />
+    <option name="totallyTimeSpent" value="15474000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1377" height="745" extended-state="0" />

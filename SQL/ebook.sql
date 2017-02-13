@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50625
 File Encoding         : 65001
 
-Date: 2017-02-09 16:15:40
+Date: 2017-02-13 15:52:42
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -63,6 +63,7 @@ CREATE TABLE `sys_comment` (
   `BOOK_COMMENT_LEVEL` int(11) DEFAULT NULL COMMENT '书本描述分数',
   `SELLER_COMMENT_LEVEL` int(11) DEFAULT NULL COMMENT '卖家服务评价',
   `UPS_COMMENT_LEVEL` int(11) DEFAULT NULL COMMENT '发货速度评价',
+  `COMMENT_LEVEL` int(11) DEFAULT NULL COMMENT '''0''差评；''1''中评；“2”好评',
   PRIMARY KEY (`COMMENT_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -151,15 +152,21 @@ CREATE TABLE `sys_user` (
   `EMAIL` varchar(150) DEFAULT NULL,
   `PHONE` int(11) DEFAULT NULL,
   `ADDRESS` varchar(255) DEFAULT NULL,
-  `USER_ROLE` int(11) DEFAULT NULL,
+  `USER_ROLE` int(11) DEFAULT '2' COMMENT '“0”是admin；“1”是管理员；“1”是卖家；“2”是纯买家',
   `PASS_WORD` varchar(255) DEFAULT NULL,
-  `ACCOUNT` int(255) DEFAULT NULL,
-  PRIMARY KEY (`USER_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `ACCOUNT` int(255) DEFAULT '0',
+  PRIMARY KEY (`USER_ID`),
+  UNIQUE KEY `EMAIL` (`EMAIL`),
+  UNIQUE KEY `PHONE` (`PHONE`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sys_user
 -- ----------------------------
+INSERT INTO `sys_user` VALUES ('1', 'admin', 'admin@', '130', null, '0', 'admin', '0');
+INSERT INTO `sys_user` VALUES ('2', 'Jan', 'Jan@', '111', null, '1', '111111', '0');
+INSERT INTO `sys_user` VALUES ('3', 'Anne', 'Anne@', '122', null, '2', '111111', '0');
+INSERT INTO `sys_user` VALUES ('4', 'Bob', 'Bob@', '123', null, '3', '111111', '0');
 
 -- ----------------------------
 -- Table structure for sys_wish_list
