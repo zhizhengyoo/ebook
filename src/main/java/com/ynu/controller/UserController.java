@@ -22,15 +22,15 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 
-	@RequestMapping(value = "/logins", method = RequestMethod.POST)
-	public String loginCheck(@RequestParam("user_name") String name, @RequestParam("user_pw") String password,
+	@RequestMapping(value = "/login", method = RequestMethod.POST)
+	public String loginCheck(@RequestParam("userName") String userName, @RequestParam("password") String password,
 			Model model, HttpSession session) {
-		System.out.println("用户填写的账号和密码是：" + name + "和" + password);
-		if (name.equals("") || password.equals("")) {
+		System.out.println("用户填写的账号和密码是：" + userName + "和" + password);
+		if (userName.equals("") || password.equals("")) {
 			model.addAttribute("message", "用户名或密码不能为空");
 			return "success";
 		} else {
-			User user = userService.find(name);
+			User user = userService.find(userName);
 
 			System.out.println("成功调用finduser");
 
@@ -42,7 +42,7 @@ public class UserController {
 				System.out.println("取出的用户" + user.getUserName());
 				if (user.getPassWord().equals(password)) {
 					// model.addAttribute("name",name);
-					session.setAttribute("tel", name);
+					session.setAttribute("tel", userName);
 					session.setAttribute("userid", user.getUserId());
 					session.setAttribute("success", user.getUserName());
 					return "index2";

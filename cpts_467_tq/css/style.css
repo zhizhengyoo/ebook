@@ -17,12 +17,15 @@ html { -webkit-text-size-adjust: none;}
 .video embed,.video object,.video iframe { width: 100%;  height: auto;}
 img{max-width:100%;	height: auto;width: auto\9; /* ie8 */}
 
-h1 {font-size: 38px;}
+/*h1 {font-size: 38px;}
 h2 {font-size: 36px;}
 h3 {font-size: 32px;}
 h4 {font-size: 28px;}
 h5 {font-size: 24px;}
-h6 {font-size: 20px;}
+h6 {font-size: 20px;}*/
+label{
+	text-align: right;
+}
 
 h1,h2,h3,h4,h5,h6 {font-family: 'Roboto', sans-serif;font-weight: 600;color: #111;}
 
@@ -57,6 +60,32 @@ select {border: 0;background: transparent;}
 /* --Line-- */
 hr.line { margin: 15px auto; padding: 0; max-width: 90px;border: 0; border-top: solid 5px #ddd;text-align: center;}
 
+
+/* ---------------------------------------------------------------------------- */
+/* -----------------------------------Login----------------------------------- */
+/* ---------------------------------------------------------------------------- */
+#loginDiv{
+	margin:40px 20px 0px 20px;
+
+}
+#signin{
+	margin:40px 20px 0px 20px;
+
+}
+.form-control:focus{
+	border-width: 1px;
+}
+#loginModal .modal-footer{
+	margin-top: 0;
+	padding: 10px 20px 12px;
+}
+/*#myTabContent .tab-content{
+	border-bottom: none;
+	border-right: none;
+	border-left: none;
+	padding: 0;
+}*/
+
 /* ---------------------------------------------------------------------------- */
 /* -----------------------------------Header----------------------------------- */
 /* ---------------------------------------------------------------------------- */
@@ -64,7 +93,7 @@ hr.line { margin: 15px auto; padding: 0; max-width: 90px;border: 0; border-top: 
 #top .language{}
 #top .currency {}
 #top ul.top-link {float: right;}
-#top ul.top-link li {display: inline-block;padding-right: 5px;margin-right: 5px;border-right: 1px solid #bbb;}
+#top ul.top-link li {display: inline-block;padding-right: 5px;margin-right: 5px;border-right: 1px solid #bbb;cursor: pointer}
 #top ul.top-link li:last-child {border: none;}
 @media(max-width:767px) {
 	#top ul.top-link li{float: none;border: none;}
@@ -96,17 +125,21 @@ header .form-search button:hover {color: #eee;}
 	header #cart {margin-top: 20px;}
 	header #cart {float: none;}
 }
-
+/*input:focus{
+	box-shadow:0 0 1px 1px #ef9033;
+	outline: #ef9033;
+	border-width: 0;
+}*/
 #menu {background-color: #e67201;border-radius: 0;height: 50px}
 #menu #heading {float: left;padding-left: 15px;font-size: 20px;font-weight: 700;line-height: 40px;color: #fff;margin-top: 10px;text-transform: uppercase;}
-#menu .dropdown-menu {background-color: #111;}
+#menu .dropdown-menu {background-color: #e67201;}
 #menu .dropdown-menu li > a:hover {color: #ffffff;background-color: #3f3f3f;}
 #menu .dropdown-inner {display: table;}
 #menu .dropdown-inner ul {display: table-cell;}
 #menu .dropdown-inner a {min-width: 160px;display: block;padding: 3px 20px;clear: both;line-height: 20px;color: #333333;font-size: 12px;}
-#menu li.dropdown:hover>a, #menu li.dropdown:focus>a, #menu li.dropdown:active>a{background: #272727;}
+#menu li.dropdown:hover>a, #menu li.dropdown:focus>a, #menu li.dropdown:active>a{background: rgb(243, 165, 68);}
 #menu ul.nav li a{color: #fff;padding: 20px ;text-transform: uppercase;}
-#menu ul.nav li a:hover{background-color: #3f3f3f;}
+#menu ul.nav li a:hover{background-color: rgb(243, 165, 68);}
 #menu .btn-navbar {font-size: 20px;color: #FFF;padding: 5px 15px;float: right;border: 3px solid #fff;}
 
 @media (min-width: 768px) {
@@ -174,7 +207,7 @@ header .form-search button:hover {color: #eee;}
 
 
 /* IMG thumb - product.html */
-.modal-body {padding:5px !important;}
+.modal-body {padding:20px 20px 5px 20px !important;}
 .modal-content {border-radius:0;}.modal-dialog img {text-align:center;margin:0 auto;}
 .controls{width:50px;display:block;font-size:19px;font-weight:500;}
 .next {float:right;text-align:right;}
@@ -238,11 +271,13 @@ footer .copyright ul li {display: inline-block;margin-left: 10px;}
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------Form--------------------------------------- */
 /* ---------------------------------------------------------------------------- */
-.form-group {margin-bottom: 25px;}
-.form-group input,.form-group textarea {padding: 10px;}
+.form-group input,.form-group textarea {padding: 4px;}
 .form-group input.form-control {height: auto;}
 .form-group textarea.form-control {height: 180px;}
-
+.form-group label{
+	padding-top: 4px;
+	font-size: 15px;
+}
 .review-form {}
 .review-form label textarea {height:130px;}
 .review-form label input, .review-form label textarea {width: 100%;}
@@ -252,9 +287,19 @@ footer .copyright ul li {display: inline-block;margin-left: 10px;}
 /* ---------------------------------------------------------------------------- */
 /* ------------------------------------Tabs------------------------------------ */
 /* ---------------------------------------------------------------------------- */
+/*
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{background: #272727;border-radius: 0;color: #fff;}
-.nav-tabs > li > a:hover, .nav-tabs > li > a:focus {background: #272727;border-radius: 0;color: #fff;}
-.tab-content {border-right: 1px solid #ccc;border-bottom: 1px solid #ccc;border-left: 1px solid #ccc;padding: 25px;}
+*/
+/*.nav-tabs > li > a:hover, .nav-tabs > li > a:focus {background: #272727;border-radius: 0;color: #fff;}*/
+/*.tab-content {
+	margin-top: 40px;
+}*/
+#loginModal .modal-header{
+	padding: 15px 15px 0;
+}
+#loginModal .nav-tabs{
+	/*border-bottom: 0px;*/
+}
 
 /* ---------------------------------------------------------------------------- */
 /* -----------------------------------Button----------------------------------- */
